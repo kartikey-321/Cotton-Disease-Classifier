@@ -8,3 +8,5 @@ It classifies whether an image is of diseased cotton leaf, diseased cotton plant
 3. JavaScript
 4. Deep Learning (Transfer Learning)
 5. Flask
+
+A glimpse of the web app is shown below:
