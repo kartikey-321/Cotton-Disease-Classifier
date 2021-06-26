@@ -1,4 +1,4 @@
-# Cotton-Disease-Classifier
+# Cotton-Disease-Prediction
 
 It classifies whether an image is of diseased cotton leaf, diseased cotton plant, fresh cotton leaf or fresh cotton plant
 
