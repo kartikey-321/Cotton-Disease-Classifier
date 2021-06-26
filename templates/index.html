@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotton Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>Cotton Disease Prediction</h1>
+    </div>
+    <div class="container">
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" id="imgInp" accept=".png, .jpg, .jpeg, .jfif" required onclick="fn()"><br><br>
+            <!-- <img id="preview" src="#" alt=""><br> -->
+            <div id="hello"></div>
+            <!-- <button onclick="fn()">Predict</button> -->
+        </form>
+    
+        <div class="result" id="r">
+            {% if data %}
+                <h1>{{data}}</h1>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy;All rights reserved</p>
+        <a href="https://github.com/kartikey-321" target="_blank"><i class="fa fa-github"></i></a>&nbsp;&nbsp;
+        <a href="https://www.linkedin.com/in/kartikey-goel-135ab2211/" target="_blank"><i class="fa fa-linkedin"></i></a>
+    </div>
+
+
+    <script>
+        var img='';
+        imgInp.onchange = evt => {
+            const [file] = imgInp.files
+            if (file) {
+                img+=`<img id="preview" src="#" alt=""><br>
+                      <button> Predict </button>`;
+                document.getElementById('hello').innerHTML=img;
+                preview.src = URL.createObjectURL(file)
+            }
+        }
+        function fn() {
+            document.getElementById('r').innerHTML=" ";
+        }
+    </script>
+</body>
+</html>
